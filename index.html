@@ -5,48 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FERROVA - Ferretería</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <header>
+
         <h1>FERROVA</h1>
         <p>Tu ferretería de confianza</p>
+
     </header>
 
-    <hr>
-
     <nav>
+
         <ul>
+
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Productos</a></li>
             <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+            <li><a href="#contacto">Contacto</a></li>
 
-    <hr>
+        </ul>
+
+    </nav>
 
     <main>
 
-        <img src="Ferrova.png" alt="Banner de Ferrova" width="100%">
-
-        <hr>
+        <img src="Ferrova.png" alt="Banner de Ferrova" class="banner">
 
         <section>
+
             <h2>¿Quiénes somos?</h2>
 
             <p>
-                FERROVA es una ferretería dedicada a ofrecer herramientas,
-                materiales de construcción, productos eléctricos, plomería,
-                pintura y accesorios para el hogar. Nuestro objetivo es brindar
-                productos de calidad y una excelente atención a nuestros clientes.
+                FERROVA es una ferretería dedicada a ofrecer herramientas, materiales de construcción,
+                productos eléctricos, plomería, pintura y accesorios para el hogar. Nuestro objetivo es
+                brindar productos de calidad y una excelente atención a nuestros clientes.
             </p>
+
         </section>
 
-        <hr>
-
         <section>
+
             <h2>Nuestros productos y servicios</h2>
 
             <ul>
@@ -58,26 +61,54 @@
                 <li>Tornillos, pernos y fijaciones.</li>
                 <li>Asesoramiento para proyectos de construcción y remodelación.</li>
             </ul>
+
         </section>
 
-        <hr>
+        <section id="contacto">
 
-        <section>
-            <h2>Contacto</h2>
+            <h2>Contáctanos</h2>
 
-            <p><strong>Nombre:</strong> Harold Rodrigo Ari Escobar</p>
-            <p><strong>Empresa:</strong> FERROVA</p>
-            <p><strong>Correo:</strong> contacto@ferrova.com</p>
-            <p><strong>Teléfono:</strong> +591 70000000</p>
+            <p>
+                ¿Tienes alguna consulta sobre nuestros productos o necesitas una cotización?
+                Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono">
+
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto">
+                    <option value="">Seleccione una opción</option>
+                    <option value="cotizacion">Solicitar cotización</option>
+                    <option value="consulta">Consulta sobre productos</option>
+                    <option value="pedido">Realizar un pedido</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriba su mensaje..." required></textarea>
+
+                <button type="submit">Enviar consulta</button>
+
+            </form>
+
         </section>
 
     </main>
 
-    <hr>
-
     <footer>
+
         <p>&copy; 2026 FERROVA - Todos los derechos reservados.</p>
         <p>Desarrollado por Harold Rodrigo Ari Escobar.</p>
+
     </footer>
 
 </body>
