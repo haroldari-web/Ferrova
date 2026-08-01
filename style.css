@@ -5,10 +5,29 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
-    color:#333;
+    font-family:Arial, sans-serif;
+    background:#121212;
+    color:white;
     line-height:1.5;
+}
+
+body.claro{
+    background:#f4f4f4;
+    color:#222;
+}
+
+.btn-modo{
+    margin-top:15px;
+    padding:10px 18px;
+    background:#ffd633;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-modo:hover{
+    background:#ffcc00;
 }
 
 /* HEADER */
@@ -20,12 +39,15 @@ header{
     padding:20px;
 }
 
+body.claro header{
+    background:#003366;
+}
+
 header h1{
     font-size:40px;
 }
 
 header p{
-    color:#ddd;
     margin-top:5px;
 }
 
@@ -33,6 +55,16 @@ header p{
 
 nav{
     background:#ff8c00;
+}
+
+.hamburguesa{
+    display:none;
+    width:100%;
+    padding:12px;
+    background:orangered;
+    color:black;
+    border:none;
+    cursor:pointer;
 }
 
 nav ul{
@@ -53,6 +85,7 @@ nav a{
 
 nav a:hover{
     background:#e67e00;
+    border-radius:5px;
 }
 
 /* MAIN */
@@ -75,16 +108,24 @@ main{
 /* Sections */
 
 section{
-    background:white;
+    background:#1e1e1e;
     margin-bottom:25px;
     padding:25px;
     border-radius:10px;
     box-shadow:0 5px 10px rgba(0,0,0,.1);
 }
 
+body.claro section{
+    background:white;
+}
+
 section h2{
-    color:#003366;
+    color:#ff8c00;
     margin-bottom:15px;
+}
+
+body.claro section h2{
+    color:#003366;
 }
 
 section ul{
@@ -106,6 +147,11 @@ form{
 
 label{
     font-weight:bold;
+    color:#ff8c00;
+}
+
+body.claro label{
+    font-weight:bold;
     color:#003366;
 }
 
@@ -116,12 +162,31 @@ input, select, textarea{
     border-radius:8px;
     font-size:16px;
     font-family:Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+body.claro input, body.claro select, body.claro textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
 }
 
 input:focus, select:focus, textarea:focus{
     outline:none;
     border-color:#ff8c00;
     box-shadow:0 0 5px rgba(255,140,0,.5);
+}
+
+body.claro input:focus, body.claro select:focus, body.claro textarea:focus{
+    outline:none;
+    border-color:#003366;
+    box-shadow:0 0 5px rgba(0,51,102,.5);
 }
 
 textarea{
@@ -140,8 +205,25 @@ button{
     transition:0.3s;
 }
 
-button:hover{
+main button:hover{
     background:#e67e00;
+    transform:scale(1.02);
+}
+
+body.claro main button{
+    background:#003366;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+body.claro main button:hover{
+    background:#00264d;
     transform:scale(1.02);
 }
 
@@ -155,11 +237,28 @@ footer{
     margin-top:30px;
 }
 
+body.claro footer{
+    background: #003366;
+}
+
 @media(max-width:600px){
 
+    .hamburguesa{
+        display: block;
+    }
+
     nav ul{
+        display: none;
         flex-direction:column;
         gap: 10px;
+    }
+
+    nav ul.abierto{
+        display: flex;
+    }
+
+    nav li{
+        margin: 10px 0;
     }
 
     section{
