@@ -37,6 +37,28 @@ ul{
     margin-top: 25px;
     margin-left: 25px;
 }
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-top: 15px;
+}
+input, textarea{
+    padding: 10px;
+    margin-top: 5px;
+}
+button{
+    margin-top: 25px;
+    padding: 10px;
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #8b5e3c;
+}
 footer{
     background-color: #6f4e37;
     color: white;
