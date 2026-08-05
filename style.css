@@ -227,6 +227,29 @@ body.claro main button:hover{
     transform:scale(1.02);
 }
 
+/* Avisos */
+.aviso{
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.aviso.error{
+    display: block;
+    background-color: #3a1414;
+    color: #ffb4b4;
+    border: 5px solid #e05555;
+}
+
+.aviso.exito{
+    display: block;
+    background-color: #14301b;
+    color: #b7f0c4;
+    border: 5px solid #3fbf6a;
+}
+
 /* Footer */
 
 footer{
