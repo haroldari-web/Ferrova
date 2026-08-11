@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERROVA - Ferretería</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>FERROVA</h1>
+        <p>Tu ferretería de confianza</p>
+        <button type="button" id="btn-tema" class="btn-modo">Cambio de modo</button>
+
+    </header>
+
+    <nav>
+        
+        <button type="button" id="btn-menu" class="hamburguesa">☰ Menú</button>
+
+        <ul>
+
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <img src="Ferrova.png" alt="Banner de Ferrova" class="banner">
+
+        <section>
+
+            <h2>¿Quiénes somos?</h2>
+
+            <p>
+                FERROVA es una ferretería dedicada a ofrecer herramientas, materiales de construcción,
+                productos eléctricos, plomería, pintura y accesorios para el hogar. Nuestro objetivo es
+                brindar productos de calidad y una excelente atención a nuestros clientes.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Nuestros productos y servicios</h2>
+
+            <ul>
+                <li>Herramientas manuales y eléctricas.</li>
+                <li>Materiales para construcción.</li>
+                <li>Pinturas y accesorios.</li>
+                <li>Artículos de plomería.</li>
+                <li>Material eléctrico.</li>
+                <li>Tornillos, pernos y fijaciones.</li>
+                <li>Asesoramiento para proyectos de construcción y remodelación.</li>
+            </ul>
+
+        </section>
+
+        <section id="contacto">
+
+            <h2>Contáctanos</h2>
+
+            <p>
+                ¿Tienes alguna consulta sobre nuestros productos o necesitas una cotización?
+                Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.
+            </p>
+
+            <form id="form-contacto" novalidate method="post" action="procesar.php">
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono">
+
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto">
+                    <option value="">Seleccione una opción</option>
+                    <option value="Cotizacion">Solicitar cotización</option>
+                    <option value="Consulta">Consulta sobre productos</option>
+                    <option value="Pedido">Realizar un pedido</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriba su mensaje..." required></textarea>
+
+                <button type="submit">Enviar consulta</button>
+
+                <p id="aviso-contacto" class="aviso"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 FERROVA - Todos los derechos reservados.</p>
+        <p>Desarrollado por Harold Rodrigo Ari Escobar.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
