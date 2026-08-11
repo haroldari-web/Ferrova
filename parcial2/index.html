@@ -11,5 +11,23 @@
         <h1>Heladería Doña Nieve</h1>
         <p>En Heladería Doña Nieve preparamos deliciosos helados para disfrutar en cualquier momento del día.</p>
     </header>
+
+    <main>
+        <form id="form-helados" novalidate method="post" action="procesar.php">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="sabores">Qué sabores querés</label>
+            <textarea id="sabores" name="sabores"></textarea>
+            <button type="submit">Enviar mi pedido</button>
+            <p id="aviso-helados" class="aviso"></p>
+        </form>
+    </main>
+
+    <footer>
+        Parcial 2 - Harold Rodrigo Ari Escobar - 11 de agosto de 2026
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
