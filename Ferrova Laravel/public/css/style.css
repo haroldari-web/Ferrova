@@ -1,0 +1,508 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#121212;
+    color:white;
+    line-height:1.5;
+}
+
+body.claro{
+    background:#f4f4f4;
+    color:#222;
+}
+
+.btn-modo{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#ffd633;
+    color: black;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+    transition: all 0.3s ease;
+}
+
+.btn-modo:hover{
+    background:#ffcc00;
+}
+
+body.claro .btn-modo {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+body.claro .btn-modo:hover {
+    background: #0f172a;
+}
+
+/* HEADER */
+
+header{
+    background:#1d1c1c;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+body.claro header{
+    background:#003366;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* NAV */
+
+nav{
+    background:#ff8c00;
+}
+
+.hamburguesa{
+    display:none;
+    width:100%;
+    padding:12px;
+    background:orangered;
+    color:black;
+    border:none;
+    cursor:pointer;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap: 25px;
+    list-style:none;
+    padding: 15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#e67e00;
+    border-radius:5px;
+}
+
+/* MAIN */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* Banner */
+
+.banner{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    margin-bottom:30px;
+}
+
+/* Sections */
+
+section{
+    background:#1e1e1e;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+body.claro section{
+    background:white;
+}
+
+section h2{
+    color:#ff8c00;
+    margin-bottom:15px;
+}
+
+body.claro section h2{
+    color:#003366;
+}
+
+section ul{
+    margin-left:20px;
+}
+
+section li{
+    margin-bottom:10px;
+}
+
+/* Productos */
+
+.encabezado-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn-agregar {
+    background: #ff8c00;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-agregar:hover {
+    background: #e67e00;
+}
+
+#productos {
+    padding: 30px;
+}
+
+#productos h2 {
+    text-align: center;
+    color: #ff8c00;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* Tarjeta */
+
+.producto-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.producto-info h3 {
+    color: #003366;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.categoria {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.precio {
+    color: #ff8c00;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stock {
+    color: #555;
+    font-size: 15px;
+}
+
+.sin-productos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+}
+
+/* AGREGAR PRODUCTO */
+
+#agregar-producto {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#agregar-producto h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.campo input, .campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff;
+    color: black;
+}
+
+.campo input:focus, .campo select:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.4);
+}
+
+.acciones {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-guardar, .btn-cancelar {
+    flex: 1;
+    padding: 13px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    background: #ff8c00;
+    color: white;
+    border: none;
+}
+
+.btn-guardar:hover {
+    background: #e67e00;
+}
+
+.btn-cancelar {
+    background: #003366;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background: #00264d;
+}
+
+/* Formulario de contacto */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+label{
+    font-weight:bold;
+    color:#ff8c00;
+}
+
+body.claro label{
+    font-weight:bold;
+    color:#003366;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+body.claro input, body.claro select, body.claro textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline:none;
+    border-color:#ff8c00;
+    box-shadow:0 0 5px rgba(255,140,0,.5);
+}
+
+body.claro input:focus, body.claro select:focus, body.claro textarea:focus{
+    outline:none;
+    border-color:#003366;
+    box-shadow:0 0 5px rgba(0,51,102,.5);
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    background:#ff8c00;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+main button:hover{
+    background:#e67e00;
+    transform:scale(1.02);
+}
+
+body.claro main button{
+    background:#003366;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+body.claro main button:hover{
+    background:#00264d;
+    transform:scale(1.02);
+}
+
+/* Avisos */
+.aviso{
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.aviso.error{
+    display: block;
+    background-color: #3a1414;
+    color: #ffb4b4;
+    border: 5px solid #e05555;
+}
+
+.aviso.exito{
+    display: block;
+    background-color: #14301b;
+    color: #b7f0c4;
+    border: 5px solid #3fbf6a;
+}
+
+/* Footer */
+
+footer{
+    background:#ff8c00;
+    color:black;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+body.claro footer{
+    background: #003366;
+    color:white;
+}
+
+@media(max-width:600px){
+
+    .hamburguesa{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+        flex-direction:column;
+        gap: 10px;
+    }
+
+    nav ul.abierto{
+        display: flex;
+    }
+
+    nav li{
+        margin: 10px 0;
+    }
+
+    section{
+        width: 100%;
+        margin-bottom:20px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #productos {
+        padding: 20px;
+    }
+    
+    #agregar-producto {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+    
+    .encabezado-productos {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+}
