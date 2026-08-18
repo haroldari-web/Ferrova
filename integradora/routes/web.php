@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Libro;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/libros', function () {
+    $libros = Libro::all();
+    return view('libros', compact('libros'));
 });
