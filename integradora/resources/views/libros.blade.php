@@ -7,9 +7,7 @@
     @if (count($libros) > 0)
         <ul>
             @foreach ($libros as $libro)
-                <li>
-                    {{ $libro->titulo }} - Bs {{ $libro->precio }}
-                </li>
+                <li>{{ $libro->titulo }} - Bs {{ $libro->precio }}</li>
             @endforeach
         </ul>
     @else
