@@ -30,6 +30,12 @@
             <li><a href="<?php echo e(url('/')); ?>"><i class="fa-solid fa-house"></i> Inicio</a></li>
             <li><a href="<?php echo e(url('/productos')); ?>"><i class="fa-solid fa-cart-shopping"></i> Productos</a></li>
             <li><a href="<?php echo e(url('/contacto')); ?>"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            <?php if(auth()->guard()->check()): ?>
+            <li><a href="<?php echo e(route('panel')); ?>"><i class="fa-solid fa-table-columns"></i> Panel</a></li>
+            <li><form action="<?php echo e(route('logout')); ?>" method="POST"><?php echo csrf_field(); ?><button type="submit" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button></form></li>
+            <?php else: ?>
+            <li><a href="<?php echo e(route('login')); ?>"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+            <?php endif; ?>
         </ul>
 
     </nav>

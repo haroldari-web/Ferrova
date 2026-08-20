@@ -10,9 +10,7 @@
 
             <h2>Nuestros productos</h2>
 
-            <a href="{{ route('productos.create') }}" class="btn-agregar">
-                + Agregar producto
-            </a>
+            <a href="{{ route('productos.create') }}" class="btn-agregar">+ Agregar producto</a>
 
         </div>
 
@@ -26,17 +24,9 @@
 
                         <h3>{{ $producto->nombre }}</h3>
 
-                        <p class="categoria">
-                            {{ $producto->categoria }}
-                        </p>
-
-                        <p class="precio">
-                            Bs. {{ number_format($producto->precio, 2) }}
-                        </p>
-
-                        <p class="stock">
-                            Stock: {{ $producto->stock }}
-                        </p>
+                        <p class="categoria">{{ $producto->categoria }}</p>
+                        <p class="precio">Bs. {{ number_format($producto->precio, 2) }}</p>
+                        <p class="stock">Stock: {{ $producto->stock }}</p>
 
                     </div>
 
@@ -44,9 +34,7 @@
 
             @empty
 
-                <p class="sin-productos">
-                    No hay productos disponibles en este momento.
-                </p>
+                <p class="sin-productos">No hay productos disponibles en este momento.</p>
 
             @endforelse
 

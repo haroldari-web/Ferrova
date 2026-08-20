@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('consultas', function (Blueprint $table) {
             $table->id('id_consulta');
-            $table->foreignId('id_cliente')->constrained('clientes', 'id_cliente')->onDelete('cascade');
+            $table->string('nombre', 100);
+            $table->string('correo', 100);
+            $table->string('telefono', 20)->nullable();
             $table->string('asunto', 100);
             $table->text('mensaje');
             $table->dateTime('fecha')->useCurrent();

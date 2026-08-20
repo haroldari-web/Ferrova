@@ -10,6 +10,14 @@
 
         <h2>Iniciar sesión</h2>
 
+        <p>Acceso exclusivo para el administrador de FERROVA.</p>
+
+        @if ($errors->any())
+            <div class="errores">
+                {{ $errors->first() }}
+            </div>
+        @endif
+
         <form action="{{ route('login') }}" method="POST">
 
             @csrf

@@ -17,16 +17,13 @@
             @csrf
 
             <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"
-                value="{{ old('nombre') }}" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" value="{{ old('nombre') }}" required>
 
             <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"
-                value="{{ old('correo') }}" required>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" value="{{ old('correo') }}" required>
 
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono"
-                value="{{ old('telefono') }}">
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" value="{{ old('telefono') }}">
 
             <label for="asunto">Asunto:</label>
             <select id="asunto" name="asunto">

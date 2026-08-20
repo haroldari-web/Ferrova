@@ -12,7 +12,9 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        //
+        $solicitudes = ContactoModel::orderBy('fecha', 'desc')->get();
+
+        return view('panel', compact('solicitudes'));
     }
 
     /**
@@ -29,13 +31,15 @@ class ContactoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_cliente' => 'required|integer|exists:clientes,id_cliente',
+            'nombre' => 'required|string|max:100',
+            'correo' => 'required|email|max:100',
+            'telefono' => 'nullable|string|max:20',
             'asunto' => 'required|string|max:100',
             'mensaje'    => 'required|string',
         ]);
 
         ContactoModel::create($request->all());
-        return redirect()->route('index')->with('success', 'Consulta enviada correctamente.');
+        return redirect()->back()->with('success', 'Su consulta fue enviada correctamente.');
     }
 
     /**

@@ -30,6 +30,12 @@
             <li><a href="{{ url('/') }}"><i class="fa-solid fa-house"></i> Inicio</a></li>
             <li><a href="{{ url('/productos') }}"><i class="fa-solid fa-cart-shopping"></i> Productos</a></li>
             <li><a href="{{ url('/contacto') }}"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            @auth
+            <li><a href="{{ route('panel') }}"><i class="fa-solid fa-table-columns"></i> Panel</a></li>
+            <li><form action="{{ route('logout') }}" method="POST">@csrf<button type="submit" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button></form></li>
+            @else
+            <li><a href="{{ route('login') }}"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+            @endauth
         </ul>
 
     </nav>

@@ -11,10 +11,6 @@ class ContactoModel extends Model
 
     protected $table = 'consultas';
     protected $primaryKey = 'id_consulta';
-    protected $fillable = ['id_cliente', 'asunto', 'mensaje', 'fecha'];
-
-    public function cliente()
-    {
-        return $this->belongsTo(ClienteModel::class,'id_cliente','id_cliente');
-    }
+    protected $fillable = ['nombre', 'correo', 'telefono', 'asunto', 'mensaje', 'fecha'];
+    protected $casts = ['fecha' => 'datetime',];
 }

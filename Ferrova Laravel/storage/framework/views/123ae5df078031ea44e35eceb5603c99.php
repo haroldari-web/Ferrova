@@ -10,9 +10,7 @@
 
             <h2>Nuestros productos</h2>
 
-            <a href="<?php echo e(route('productos.create')); ?>" class="btn-agregar">
-                + Agregar producto
-            </a>
+            <a href="<?php echo e(route('productos.create')); ?>" class="btn-agregar">+ Agregar producto</a>
 
         </div>
 
@@ -26,20 +24,9 @@
 
                         <h3><?php echo e($producto->nombre); ?></h3>
 
-                        <p class="categoria">
-                            <?php echo e($producto->categoria); ?>
-
-                        </p>
-
-                        <p class="precio">
-                            Bs. <?php echo e(number_format($producto->precio, 2)); ?>
-
-                        </p>
-
-                        <p class="stock">
-                            Stock: <?php echo e($producto->stock); ?>
-
-                        </p>
+                        <p class="categoria"><?php echo e($producto->categoria); ?></p>
+                        <p class="precio">Bs. <?php echo e(number_format($producto->precio, 2)); ?></p>
+                        <p class="stock">Stock: <?php echo e($producto->stock); ?></p>
 
                     </div>
 
@@ -47,9 +34,7 @@
 
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
 
-                <p class="sin-productos">
-                    No hay productos disponibles en este momento.
-                </p>
+                <p class="sin-productos">No hay productos disponibles en este momento.</p>
 
             <?php endif; ?>
 

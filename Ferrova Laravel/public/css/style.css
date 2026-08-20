@@ -7,7 +7,6 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
     background:#121212;
     color:white;
     line-height:1.5;
@@ -75,6 +74,7 @@ header p{
 
 nav{
     background:#ff8c00;
+    padding: 15px;
 }
 
 .hamburguesa{
@@ -106,6 +106,27 @@ nav a{
 nav a:hover{
     background:#e67e00;
     border-radius:5px;
+}
+
+nav form {
+    margin: 0;
+}
+
+.btn-logout {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: #e67e00;
+    border-radius: 5px;
 }
 
 /* MAIN */
@@ -241,12 +262,116 @@ section li{
     padding: 30px;
 }
 
+/* LOGIN FERROVA */
+
+.login-container {
+    background:#121212;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Tarjeta del login */
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+
+.login-card h2 {
+    text-align: center;
+    color: #ff8c00;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+
+.login-card > p {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* Campos */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+}
+
+/* Efecto al seleccionar un campo */
+
+.campo input:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 0 6px rgba(255, 140, 0, 0.35);
+}
+
+/* Botón */
+
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    background: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    background: #e67e00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensaje de error */
+
+.errores {
+    background: #ffe5e5;
+    border: 1px solid #ff6b6b;
+    color: #a00000;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 /* AGREGAR PRODUCTO */
 
 #agregar-producto {
     max-width: 700px;
     margin: 40px auto;
-    background: white;
+    background: #1e1e1e;
     padding: 35px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -254,7 +379,7 @@ section li{
 
 #agregar-producto h2 {
     text-align: center;
-    color: #003366;
+    color: #ff8c00;
     margin-bottom: 10px;
 }
 
@@ -271,7 +396,7 @@ section li{
 }
 
 .campo label {
-    color: #003366;
+    color: #ff8c00;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -330,7 +455,7 @@ section li{
 
 /* Formulario de contacto */
 
-form{
+#form-contacto{
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -385,7 +510,7 @@ textarea{
     resize:vertical;
 }
 
-button{
+main button{
     background:#ff8c00;
     color:white;
     border:none;
@@ -440,6 +565,79 @@ body.claro main button:hover{
     background-color: #14301b;
     color: #b7f0c4;
     border: 5px solid #3fbf6a;
+}
+
+/* Panel de Administración */
+
+#panel {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.panel-header h2 {
+    color: #ff8c00;
+    margin-bottom: 8px;
+}
+
+.panel-header p {
+    color: #ddd;
+}
+
+.administrador {
+    background: #ff8c00;
+    color: black;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+/* Tabla */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+thead {
+    background: #ff8c00;
+    color: black;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background: black;
+}
+
+.mensaje {
+    max-width: 300px;
+}
+
+.sin-solicitudes {
+    text-align: center;
+    padding: 30px;
+    color: #ddd;
 }
 
 /* Footer */
@@ -505,4 +703,17 @@ body.claro footer{
         gap: 15px;
     }
     
+    .login-container {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-card h2 {
+        font-size: 26px;
+    }
+
 }
